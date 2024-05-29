@@ -1,0 +1,86 @@
+﻿  Tarea 6 - TaP.cpp
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(48,30): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(119,34): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(175,114): warning C4244: 'argumento': conversión de '_Rep' a '_Ty'; posible pérdida de datos
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(175,114): warning C4244:         with
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(175,114): warning C4244:         [
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(175,114): warning C4244:             _Rep=__int64
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(175,114): warning C4244:         ]
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(175,114): warning C4244:         and
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(175,114): warning C4244:         [
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(175,114): warning C4244:             _Ty=float
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(175,114): warning C4244:         ]
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(176,114): warning C4244: 'argumento': conversión de '_Rep' a '_Ty'; posible pérdida de datos
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(176,114): warning C4244:         with
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(176,114): warning C4244:         [
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(176,114): warning C4244:             _Rep=__int64
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(176,114): warning C4244:         ]
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(176,114): warning C4244:         and
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(176,114): warning C4244:         [
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(176,114): warning C4244:             _Ty=float
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(176,114): warning C4244:         ]
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(177,114): warning C4244: 'argumento': conversión de '_Rep' a '_Ty'; posible pérdida de datos
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(177,114): warning C4244:         with
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(177,114): warning C4244:         [
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(177,114): warning C4244:             _Rep=__int64
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(177,114): warning C4244:         ]
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(177,114): warning C4244:         and
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(177,114): warning C4244:         [
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(177,114): warning C4244:             _Ty=float
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(177,114): warning C4244:         ]
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(182,121): warning C4244: 'argumento': conversión de '_Rep' a '_Ty'; posible pérdida de datos
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(182,121): warning C4244:         with
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(182,121): warning C4244:         [
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(182,121): warning C4244:             _Rep=__int64
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(182,121): warning C4244:         ]
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(182,121): warning C4244:         and
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(182,121): warning C4244:         [
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(182,121): warning C4244:             _Ty=float
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(182,121): warning C4244:         ]
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(183,121): warning C4244: 'argumento': conversión de '_Rep' a '_Ty'; posible pérdida de datos
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(183,121): warning C4244:         with
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(183,121): warning C4244:         [
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(183,121): warning C4244:             _Rep=__int64
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(183,121): warning C4244:         ]
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(183,121): warning C4244:         and
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(183,121): warning C4244:         [
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(183,121): warning C4244:             _Ty=float
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(183,121): warning C4244:         ]
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(184,121): warning C4244: 'argumento': conversión de '_Rep' a '_Ty'; posible pérdida de datos
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(184,121): warning C4244:         with
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(184,121): warning C4244:         [
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(184,121): warning C4244:             _Rep=__int64
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(184,121): warning C4244:         ]
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(184,121): warning C4244:         and
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(184,121): warning C4244:         [
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(184,121): warning C4244:             _Ty=float
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(184,121): warning C4244:         ]
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(190,121): warning C4244: 'argumento': conversión de '_Rep' a '_Ty'; posible pérdida de datos
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(190,121): warning C4244:         with
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(190,121): warning C4244:         [
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(190,121): warning C4244:             _Rep=__int64
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(190,121): warning C4244:         ]
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(190,121): warning C4244:         and
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(190,121): warning C4244:         [
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(190,121): warning C4244:             _Ty=float
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(190,121): warning C4244:         ]
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(191,121): warning C4244: 'argumento': conversión de '_Rep' a '_Ty'; posible pérdida de datos
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(191,121): warning C4244:         with
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(191,121): warning C4244:         [
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(191,121): warning C4244:             _Rep=__int64
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(191,121): warning C4244:         ]
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(191,121): warning C4244:         and
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(191,121): warning C4244:         [
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(191,121): warning C4244:             _Ty=float
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(191,121): warning C4244:         ]
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(192,121): warning C4244: 'argumento': conversión de '_Rep' a '_Ty'; posible pérdida de datos
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(192,121): warning C4244:         with
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(192,121): warning C4244:         [
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(192,121): warning C4244:             _Rep=__int64
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(192,121): warning C4244:         ]
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(192,121): warning C4244:         and
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(192,121): warning C4244:         [
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(192,121): warning C4244:             _Ty=float
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(192,121): warning C4244:         ]
+C:\Users\Daniel\Desktop\Work\Tarea6TaP\Tarea 6 - TaP.cpp(227,25): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  Tarea 6 - TaP.vcxproj -> C:\Users\Daniel\Desktop\Work\Tarea6TaP\x64\Debug\Tarea 6 - TaP.exe

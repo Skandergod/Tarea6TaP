@@ -5,8 +5,11 @@
 #include <unordered_map>
 #include <vector>
 #include <unordered_set>
+#include <cstddef>
+#include <iomanip>
+#include <numeric>
 
-std::vector < std::vector< std::chrono::duration<double> > > ThreadTimers;
+std::vector < std::vector< float > > ThreadTimers;
 
 void foo(int N, int Iterations, int ThreadNumber, int intercaladas)
 {
@@ -14,15 +17,14 @@ void foo(int N, int Iterations, int ThreadNumber, int intercaladas)
     int buffer = 0, bufferDel = 0, option = 0, insertRandomCount = 0, modifyRandomCount = 0, deleteRandomCount = 0;
     std::unordered_map<int, int> map;
     std::vector<int> aux;
-    std::chrono::time_point<std::chrono::system_clock> start;
-    std::chrono::time_point<std::chrono::system_clock> startInsert;
-    std::chrono::time_point<std::chrono::system_clock> endInsert;
+    std::chrono::time_point<std::chrono::high_resolution_clock> startInsert;
+    std::chrono::time_point<std::chrono::high_resolution_clock> endInsert;
     std::chrono::duration<double> totalInsert;
-    std::chrono::time_point<std::chrono::system_clock> startModify;
-    std::chrono::time_point<std::chrono::system_clock> endModify;
+    std::chrono::time_point<std::chrono::high_resolution_clock> startModify;
+    std::chrono::time_point<std::chrono::high_resolution_clock> endModify;
     std::chrono::duration<double> totalModify;
-    std::chrono::time_point<std::chrono::system_clock> startDelete;
-    std::chrono::time_point<std::chrono::system_clock> endDelete;
+    std::chrono::time_point<std::chrono::high_resolution_clock> startDelete;
+    std::chrono::time_point<std::chrono::high_resolution_clock> endDelete;
     std::chrono::duration<double> totalDelete;
 
     std::cout << "Entre con i = " << Iterations << std::endl;
@@ -46,9 +48,9 @@ void foo(int N, int Iterations, int ThreadNumber, int intercaladas)
             buffer = aux.size();
             aux.insert(aux.end(), buffer);
 
-            startInsert = std::chrono::system_clock::now();
+            startInsert = std::chrono::high_resolution_clock::now();
             map.insert({ buffer, buffer + 10 });
-            endInsert = std::chrono::system_clock::now();
+            endInsert = std::chrono::high_resolution_clock::now();
 
             totalInsert += endInsert - startInsert;
 
@@ -73,9 +75,9 @@ void foo(int N, int Iterations, int ThreadNumber, int intercaladas)
 
             aux.pop_back();
 
-            startDelete = std::chrono::system_clock::now();
+            startDelete = std::chrono::high_resolution_clock::now();
             map.erase(buffer);
-            endDelete = std::chrono::system_clock::now();
+            endDelete = std::chrono::high_resolution_clock::now();
 
             totalDelete += endDelete - startDelete;
 
@@ -93,9 +95,9 @@ void foo(int N, int Iterations, int ThreadNumber, int intercaladas)
             buffer = (rand() % aux.size());
             buffer = aux[buffer];
 
-            startModify = std::chrono::system_clock::now();
+            startModify = std::chrono::high_resolution_clock::now();
             map[buffer] = buffer + 10;
-            endModify = std::chrono::system_clock::now();
+            endModify = std::chrono::high_resolution_clock::now();
 
             totalModify += endModify - startModify;
 
@@ -117,9 +119,9 @@ void foo(int N, int Iterations, int ThreadNumber, int intercaladas)
                 buffer = aux.size();
                 aux.insert(aux.end(), buffer);
 
-                startInsert = std::chrono::system_clock::now();
+                startInsert = std::chrono::high_resolution_clock::now();
                 map.insert({ buffer, buffer + 10 });
-                endInsert = std::chrono::system_clock::now();
+                endInsert = std::chrono::high_resolution_clock::now();
 
                 totalInsert += endInsert - startInsert;
 
@@ -139,9 +141,9 @@ void foo(int N, int Iterations, int ThreadNumber, int intercaladas)
 
                 aux.pop_back();
 
-                startDelete = std::chrono::system_clock::now();
+                startDelete = std::chrono::high_resolution_clock::now();
                 map.erase(buffer);
-                endDelete = std::chrono::system_clock::now();
+                endDelete = std::chrono::high_resolution_clock::now();
 
                 totalDelete += endDelete - startDelete;
 
@@ -155,9 +157,9 @@ void foo(int N, int Iterations, int ThreadNumber, int intercaladas)
                 buffer = (rand() % aux.size());
                 buffer = aux[buffer];
 
-                startModify = std::chrono::system_clock::now();
+                startModify = std::chrono::high_resolution_clock::now();
                 map[buffer] = buffer + 10;
-                endModify = std::chrono::system_clock::now();
+                endModify = std::chrono::high_resolution_clock::now();
 
                 totalModify += endModify - startModify;
 
@@ -169,35 +171,35 @@ void foo(int N, int Iterations, int ThreadNumber, int intercaladas)
 
     }
 
-
-    ThreadTimers[ThreadNumber].push_back(totalInsert);    //Tiempo total de todas las operaciones de insercion
-    ThreadTimers[ThreadNumber].push_back(totalModify);    //Tiempo total de todas las operaciones de busqueda y modificacion
-    ThreadTimers[ThreadNumber].push_back(totalDelete);    //Tiempo total de todas las operaciones de borrar
+    std::cout << std::setw(9) << totalInsert.count() * -1  << std::endl;
+    ThreadTimers[ThreadNumber].push_back(std::chrono::duration_cast<std::chrono::microseconds>(totalInsert).count());    //Tiempo total de todas las operaciones de insercion
+    ThreadTimers[ThreadNumber].push_back(std::chrono::duration_cast<std::chrono::microseconds>(totalModify).count());    //Tiempo total de todas las operaciones de busqueda y modificacion
+    ThreadTimers[ThreadNumber].push_back(std::chrono::duration_cast<std::chrono::microseconds>(totalDelete).count());    //Tiempo total de todas las operaciones de borrar
 
     if (intercaladas == 0)
     {
 
-        ThreadTimers[ThreadNumber].push_back(totalInsert / Iterations); //Tiempo Promedio de cada insercion
-        ThreadTimers[ThreadNumber].push_back(totalModify / Iterations); //Tiempo Promedio de cada busqueda y modifcacion
-        ThreadTimers[ThreadNumber].push_back(totalDelete / Iterations); //Tiempo Promedio de cada borrar
+        ThreadTimers[ThreadNumber].push_back(std::chrono::duration_cast<std::chrono::microseconds>(totalInsert).count() / Iterations); //Tiempo Promedio de cada insercion
+        ThreadTimers[ThreadNumber].push_back(std::chrono::duration_cast<std::chrono::microseconds>(totalModify).count() / Iterations); //Tiempo Promedio de cada busqueda y modifcacion
+        ThreadTimers[ThreadNumber].push_back(std::chrono::duration_cast<std::chrono::microseconds>(totalDelete).count() / Iterations); //Tiempo Promedio de cada borrar
 
     }
     else
     {
 
-        ThreadTimers[ThreadNumber].push_back(totalInsert / insertRandomCount);  //Tiempo Promedio de cada insercion
-        ThreadTimers[ThreadNumber].push_back(totalModify / modifyRandomCount);  //Tiempo Promedio de cada busqueda y modifcacion
-        ThreadTimers[ThreadNumber].push_back(totalDelete / deleteRandomCount);  //Tiempo Promedio de cada borrar
+        ThreadTimers[ThreadNumber].push_back(std::chrono::duration_cast<std::chrono::microseconds>(totalInsert).count() / insertRandomCount);  //Tiempo Promedio de cada insercion
+        ThreadTimers[ThreadNumber].push_back(std::chrono::duration_cast<std::chrono::microseconds>(totalModify).count() / modifyRandomCount);  //Tiempo Promedio de cada busqueda y modifcacion
+        ThreadTimers[ThreadNumber].push_back(std::chrono::duration_cast<std::chrono::microseconds>(totalDelete).count() / deleteRandomCount);  //Tiempo Promedio de cada borrar
 
     }
 
     std::cout << "Tiempos Para i = " << Iterations << " y N = " << N << std::endl;
-    std::cout << "Tiempo Total de inserciones del foo " << ThreadNumber << " es de " << std::chrono::duration_cast<std::chrono::milliseconds>(ThreadTimers[ThreadNumber][0]).count() << " ms" << std::endl;
-    std::cout << "Tiempo Total de Busqueda del foo " << ThreadNumber << " es de " << std::chrono::duration_cast<std::chrono::milliseconds>(ThreadTimers[ThreadNumber][1]).count()  << " ms" << std::endl;
-    std::cout << "Tiempo Total de Delete del foo " << ThreadNumber << " es de " << std::chrono::duration_cast<std::chrono::milliseconds>(ThreadTimers[ThreadNumber][2]).count() << " ms" << std::endl;
-    std::cout << "Tiempo promedio de inserciones del foo " << ThreadNumber << " es de " << std::chrono::duration_cast<std::chrono::milliseconds>(ThreadTimers[ThreadNumber][3]).count()  << " ms" << std::endl;
-    std::cout << "Tiempo promedio de Busqueda del foo " << ThreadNumber << " es de " << std::chrono::duration_cast<std::chrono::milliseconds>(ThreadTimers[ThreadNumber][4]).count() << " ms" << std::endl;
-    std::cout << "Tiempo promedio de Busqueda del foo " << ThreadNumber << " es de " << std::chrono::duration_cast<std::chrono::milliseconds>(ThreadTimers[ThreadNumber][5]).count() << " ms" << std::endl;
+    std::cout << "Tiempo Total de inserciones del foo " << ThreadNumber << " es de " << ThreadTimers[ThreadNumber][0] << " ms" << std::endl;
+    std::cout << "Tiempo Total de Busqueda del foo " << ThreadNumber << " es de " << ThreadTimers[ThreadNumber][1]  << " ms" << std::endl;
+    std::cout << "Tiempo Total de Delete del foo " << ThreadNumber << " es de " << ThreadTimers[ThreadNumber][2] << " ms" << std::endl;
+    std::cout << "Tiempo promedio de inserciones del foo " << ThreadNumber << " es de " << ThreadTimers[ThreadNumber][3]  << " ms" << std::endl;
+    std::cout << "Tiempo promedio de Busqueda del foo " << ThreadNumber << " es de " << ThreadTimers[ThreadNumber][4] << " ms" << std::endl;
+    std::cout << "Tiempo promedio de Busqueda del foo " << ThreadNumber << " es de " << ThreadTimers[ThreadNumber][5] << " ms" << std::endl;
     std::cout << std::endl;
     //std::cout << "Hilo " << ThreadNumber << " Ejecucion Terminada"<< std::endl;
 
@@ -209,7 +211,7 @@ void foo(int N, int Iterations, int ThreadNumber, int intercaladas)
 int main(int argc, char* argv[]) {
 
     int f = 0, TotalIterations = 0, N = 0, TotalThreads = 0, intercalar = 0;
-    std::vector< std::chrono::duration<double> > arr;
+    std::vector< float > arr;
 
 
     N = 10;                  //N del algoritmo a ejecutar
